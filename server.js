@@ -10,6 +10,11 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.raw({ type: 'text/plain' }))
 
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+});
+
 app.post('/post', async (req, res) => {
 	console.log(req.body)
   try {
